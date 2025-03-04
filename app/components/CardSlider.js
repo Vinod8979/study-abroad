@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const CardSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,7 +91,6 @@ const CardSlider = () => {
 
   return (
     <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
-
       <div className="overflow-hidden relative rounded-lg">
         <div 
           className="flex space-x-2 sm:space-x-4 lg:space-x-6"
@@ -105,11 +105,17 @@ const CardSlider = () => {
               className={`flex-none ${getCardWidth()} transform transition-all duration-500 hover:scale-105`}
             >
               <div className="bg-white rounded-lg overflow-hidden shadow-lg h-full flex flex-col transition-shadow duration-300 hover:shadow-xl">
-                <div className="relative overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden h-32 sm:h-40 lg:h-48">
+                  <Image
                     src={card.imageSrc}
                     alt={card.title}
-                    className="w-full h-32 sm:h-40 lg:h-48 object-cover transition-transform duration-300 hover:scale-110"
+                    width={400}
+                    height={240}
+                    className="object-cover transition-transform duration-300 hover:scale-110"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                    }}
                   />
                 </div>
                 <div className="p-2 sm:p-3 lg:p-4 flex-1 flex flex-col">
@@ -121,37 +127,37 @@ const CardSlider = () => {
           ))}
         </div>
 
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 sm:left-2 lg:left-4 top-1/2 -translate-y-1/2 bg-white p-1 sm:p-2 rounded-full shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-transform duration-300 hover:scale-110"
-        disabled={currentIndex === 0}
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 bg-white p-1 sm:p-2 rounded-full shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-transform duration-300 hover:scale-110"
-        disabled={currentIndex >= maxIndex}
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-      </button>
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 sm:left-2 lg:left-4 top-1/2 -translate-y-1/2 bg-white p-1 sm:p-2 rounded-full shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-transform duration-300 hover:scale-110"
+          disabled={currentIndex === 0}
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 bg-white p-1 sm:p-2 rounded-full shadow-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-transform duration-300 hover:scale-110"
+          disabled={currentIndex >= maxIndex}
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+        </button>
 
-      <div className="flex justify-center m-2 sm:mt-3 lg:mt-4 gap-1 sm:gap-2">
-        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 transform hover:scale-150 ${
-              currentIndex === index ? 'bg-blue-600 scale-125' : 'bg-gray-300'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+        <div className="flex justify-center m-2 sm:mt-3 lg:mt-4 gap-1 sm:gap-2">
+          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 transform hover:scale-150 ${
+                currentIndex === index ? 'bg-blue-600 scale-125' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

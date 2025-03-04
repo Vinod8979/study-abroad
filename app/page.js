@@ -110,28 +110,29 @@ export default function Home() {
                 layout="fill"
                 objectFit="cover"
                 priority
+
                 className="object-center"
               />
             </div>
             <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
-            <div className="relative flex items-center justify-start h-full text-left px-4 sm:px-6 lg:px-12">
-              <div className="w-full md:w-3/5 lg:w-1/2 backdrop-blur-sm bg-black/40 p-5 sm:p-6 md:p-8 rounded-lg shadow-lg border border-white/10 mt-10">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                  HIGHER EDUCATION ABROAD
-                </h1>
-                <div className="mt-4 md:mt-5">
-                  <p className="text-sm sm:text-base md:text-lg text-white/90">
-                    Studying abroad opens the door to new possibilities for personal and professional growth. It allows you to gain a unique educational experience in some of the world's leading universities while exploring diverse cultures.
-                  </p>
+              <div className="relative flex items-center justify-start h-full text-left px-4 sm:px-6 lg:px-12">
+                <div className="w-full md:w-3/5 lg:w-1/2 backdrop-blur-sm bg-black/40 p-5 sm:p-6 md:p-8 rounded-lg shadow-lg border border-white/10 mt-10">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                    HIGHER EDUCATION ABROAD
+                  </h1>
+                  <div className="mt-4 md:mt-5">
+                    <p className="text-sm sm:text-base md:text-lg text-white/90">
+                      Studying abroad opens the door to new possibilities for personal and professional growth. It allows you to gain a unique educational experience in some of the world's leading universities while exploring diverse cultures.
+                    </p>
+                  </div>
+                  <Link
+                    href="https://example.com/event1"
+                    className="inline-flex items-center mt-6 md:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium"
+                  >
+                    Register Now <span className="ml-1">→</span>
+                  </Link>
                 </div>
-                <Link
-                  href="https://example.com/event1"
-                  className="inline-flex items-center mt-6 md:mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium"
-                >
-                  Register Now <span className="ml-1">→</span>
-                </Link>
               </div>
-            </div>
             </div>
           </section>
         </main>
@@ -143,58 +144,61 @@ export default function Home() {
         <section className="relative h-96 sm:h-72 md:h-96 rounded-[10px] bg-purple-50">
 
           <div className="relative flex flex-col items-center justify-center h-full text-left px-4">
-          <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
+            <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
 
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-purple-400 leading-tight">
-              Hello we are HEA
-            </h2>
-            <h2 className="text-xl sm:text-2xl md:text-3xl mt-1 font-bold text-purple-400 leading-tight">
-              Higher Education Abroad
-            </h2>
-            <p className="mt-5 text-base sm:text-base md:text-lg font-bold">
-              "Embark on a journey of learning beyond borders! Studying abroad opens doors to new cultures, knowledge, and opportunities. Whether it's gaining international experience or broadening your global perspective, this experience will shape your future".
-            </p>
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-purple-400 leading-tight">
+                Hello we are HEA
+              </h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl mt-1 font-bold text-purple-400 leading-tight">
+                Higher Education Abroad
+              </h2>
+              <p className="mt-5 text-base sm:text-base md:text-lg font-bold">
+                "Embark on a journey of learning beyond borders! Studying abroad opens doors to new cultures, knowledge, and opportunities. Whether it's gaining international experience or broadening your global perspective, this experience will shape your future".
+              </p>
             </div>
           </div>
         </section>
 
         {/* experience */}
         <section className="p-6 bg-white rounded-lg shadow-sm my-12">
-        <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
-            {/* First stat box */}
-            <div className="bg-gray-100 p-8 rounded-lg flex flex-col items-center justify-center">
-              <AnimatedCounter target={16} suffix="+" />
-              <p className="text-gray-700">Years of Experience</p>
+              {/* First stat box */}
+              <div className="bg-gray-100 p-8 rounded-lg flex flex-col items-center justify-center">
+                <AnimatedCounter target={16} suffix="+" />
+                <p className="text-gray-700">Years of Experience</p>
+              </div>
+
+              {/* Second stat box */}
+              <div className="bg-gray-100 p-8 rounded-lg flex flex-col items-center justify-center">
+                <AnimatedCounter target={1200} suffix="+" />
+                <p className="text-gray-700">University Partners</p>
+              </div>
             </div>
 
-            {/* Second stat box */}
+            {/* Third stat box */}
             <div className="bg-gray-100 p-8 rounded-lg flex flex-col items-center justify-center">
-              <AnimatedCounter target={1200} suffix="+" />
-              <p className="text-gray-700">University Partners</p>
+              <AnimatedCounter target={10000} suffix="+" />
+              <p className="text-gray-700">Students Enrolled Successfully Across Globe</p>
             </div>
-          </div>
-
-          {/* Third stat box */}
-          <div className="bg-gray-100 p-8 rounded-lg flex flex-col items-center justify-center">
-            <AnimatedCounter target={10000} suffix="+" />
-            <p className="text-gray-700">Students Enrolled Successfully Across Globe</p>
-          </div>
           </div>
         </section>
 
         {/* How we work */}
         <section className="bg-purple-50 py-6 px-3">
-        <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
+          <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 md:mb-10 text-center">How we work</h2>
             <div className="bg-white rounded-lg shadow-sm mb-4 p-3 flex flex-col md:flex-row justify-between items-center">
               <div className="text-xl md:text-3xl text-gray-500 font-bold mb-2 md:mb-0">Step 1</div>
               <div className="text-3xl md:text-5xl text-gray-800 font-medium">CONSULT</div>
               <div className="mt-3 md:mt-0">
-                <img
+                <Image
                   src="/Student-Counseling.jpg"
                   alt="Consultation meeting"
+                  width={300} // Add this
+                  height={200} // Add this
+
                   className="rounded-lg w-full md:w-64 h-auto"
                 />
               </div>
@@ -204,9 +208,11 @@ export default function Home() {
               <div className="text-xl md:text-3xl text-gray-500 font-bold mb-2 md:mb-0">Step 2</div>
               <div className="text-3xl md:text-5xl text-gray-800 font-medium">APPLY</div>
               <div className="mt-3 md:mt-0">
-                <img
+                <Image
                   src="/apply.png"
                   alt="Application process"
+                  width={300} // Add this
+                  height={200} // Add this
                   className="rounded-lg w-full md:w-64 h-auto"
                 />
               </div>
@@ -216,9 +222,11 @@ export default function Home() {
               <div className="text-xl md:text-3xl text-gray-500 font-bold mb-2 md:mb-0">Step 3</div>
               <div className="text-3xl md:text-5xl text-gray-800 font-medium">FLY</div>
               <div className="mt-3 md:mt-0">
-                <img
+                <Image
                   src="/fly.png"
                   alt="final process"
+                  width={300} // Add this
+                  height={200} // Add this
                   className="rounded-lg w-full md:w-64 h-auto"
                 />
               </div>
@@ -234,38 +242,38 @@ export default function Home() {
           <h2 className="text-xl font-bold">Events</h2>
         </section>
         <section className="p-4 bg-stone-50 mt-2 rounded-[10px]">
-        <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
+          <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Event
-              date="March 25, 2025"
-              time="10:00 AM"
-              title="In-House Canadian Edu Expo"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              registerLink="https://example.com/event1"
-            />
-            <Event
-              date="April 15, 2025"
-              time="2:00 PM"
-              title="Canadian Edu Expo"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              registerLink="https://example.com/event1"
-            />
-            <Event
-              date="May 5, 2025"
-              time="11:00 AM"
-              title="TRU Exclusive Application Day"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              registerLink="https://example.com/event1"
-            />
-            <Event
-              date="June 10, 2025"
-              time="4:00 PM"
-              title="Pre-departure briefing"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              registerLink="https://example.com/event4"
-            />
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Event
+                date="March 25, 2025"
+                time="10:00 AM"
+                title="In-House Canadian Edu Expo"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                registerLink="https://example.com/event1"
+              />
+              <Event
+                date="April 15, 2025"
+                time="2:00 PM"
+                title="Canadian Edu Expo"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                registerLink="https://example.com/event1"
+              />
+              <Event
+                date="May 5, 2025"
+                time="11:00 AM"
+                title="TRU Exclusive Application Day"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                registerLink="https://example.com/event1"
+              />
+              <Event
+                date="June 10, 2025"
+                time="4:00 PM"
+                title="Pre-departure briefing"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                registerLink="https://example.com/event4"
+              />
+            </div>
           </div>
         </section>
 
@@ -281,27 +289,27 @@ export default function Home() {
         </section>
         <section className="py-5 bg-gradient-to-r from-pink-200 to-blue-200">
           <div className="pl-6 pr-6">
-          <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
+            <div className='container max-w-9xl mx-auto px-6 lg:px-12'>
 
-            <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Do UK universities and courses have quality assurance?</AccordionTrigger>
-                <AccordionContent>Yes, the universities in the UK are expected to meet the standards set by the quality assurance system in the UK. Their universities are globally recognised for the strong academic and research departments that offer a diverse range of courses and for the friendly, multicultural communities in the campuses that offer a space where everyone can belong.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>How do I find and apply for a course to study at a UK university?</AccordionTrigger>
-                <AccordionContent>You can search for courses through the UCAS website or individual university websites. The application process typically involves submitting your academic qualifications, English language proficiency test scores, a personal statement, and letters of recommendation through UCAS or directly to the university.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Where can I find scholarships and financial support for studying in the UK?</AccordionTrigger>
-                <AccordionContent>There are various scholarship opportunities available including university-specific scholarships, government scholarships like Chevening, and external funding organizations. You can check university websites, scholarship databases, and consult with our education advisors for personalized guidance.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>What are the visa requirements for studying in the UK?</AccordionTrigger>
-                <AccordionContent>To study in the UK, you'll need a Student visa formerly Tier 4. Requirements include an offer from a licensed education provider, proof of English language proficiency, and evidence of sufficient funds to support yourself. Our visa preparation service can guide you through the entire process.</AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Do UK universities and courses have quality assurance?</AccordionTrigger>
+                  <AccordionContent>Yes, the universities in the UK are expected to meet the standards set by the quality assurance system in the UK. Their universities are globally recognised for the strong academic and research departments that offer a diverse range of courses and for the friendly, multicultural communities in the campuses that offer a space where everyone can belong.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How do I find and apply for a course to study at a UK university?</AccordionTrigger>
+                  <AccordionContent>You can search for courses through the UCAS website or individual university websites. The application process typically involves submitting your academic qualifications, English language proficiency test scores, a personal statement, and letters of recommendation through UCAS or directly to the university.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Where can I find scholarships and financial support for studying in the UK?</AccordionTrigger>
+                  <AccordionContent>There are various scholarship opportunities available including university-specific scholarships, government scholarships like Chevening, and external funding organizations. You can check university websites, scholarship databases, and consult with our education advisors for personalized guidance.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>What are the visa requirements for studying in the UK?</AccordionTrigger>
+                  <AccordionContent>To study in the UK, you'll need a Student visa formerly Tier 4. Requirements include an offer from a licensed education provider, proof of English language proficiency, and evidence of sufficient funds to support yourself. Our visa preparation service can guide you through the entire process.</AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </section>
         <ContactForm />

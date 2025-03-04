@@ -2,7 +2,7 @@ import React from 'react';
 
 const PartnerLogo = ({ src, alt }) => (
   <div className="flex items-center justify-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-300">
-    <img 
+    <Image  
       src={src} 
       alt={alt}
       className="max-h-16 w-auto object-contain"

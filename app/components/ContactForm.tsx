@@ -8,7 +8,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { formSchema } from "@/lib/schemas"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-
 import type { z } from "zod"
 
 export default function ContactForm() {
@@ -23,11 +22,7 @@ export default function ContactForm() {
     },
   })
 
-  // Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // This will be type-safe and validated.
-    // send(values);
     console.log("the values are ", values)
   }
 
@@ -37,7 +32,7 @@ export default function ContactForm() {
         <Card className="w-full border-0 shadow-none">
           <CardHeader className="space-y-2 px-0">
             <CardTitle className="text-2xl">Contact Us</CardTitle>
-            <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
+            <CardDescription>Fill out the form below and we&apos;ll get back to you as soon as possible.</CardDescription>
           </CardHeader>
           <CardContent className="px-0">
             <Form {...form}>
@@ -49,11 +44,15 @@ export default function ContactForm() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>First Name</FormLabel>
+                        <FormLabel className="text-gray-700">First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your First Name" {...field} />
+                          <Input 
+                            placeholder="Enter your first name" 
+                            className="h-11 focus:ring-2 focus:ring-blue-500" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-sm" />
                       </FormItem>
                     )}
                   />
@@ -63,11 +62,15 @@ export default function ContactForm() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Last Name</FormLabel>
+                        <FormLabel className="text-gray-700">Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your Last Name" {...field} />
+                          <Input 
+                            placeholder="Enter your last name" 
+                            className="h-11 focus:ring-2 focus:ring-blue-500" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-sm" />
                       </FormItem>
                     )}
                   />
@@ -77,11 +80,16 @@ export default function ContactForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-gray-700">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john.doe@example.com" {...field} />
+                          <Input 
+                            type="email"
+                            placeholder="example@domain.com" 
+                            className="h-11 focus:ring-2 focus:ring-blue-500" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-sm" />
                       </FormItem>
                     )}
                   />
@@ -94,11 +102,16 @@ export default function ContactForm() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Phone Number</FormLabel>
+                        <FormLabel className="text-gray-700">Phone Number</FormLabel>
                         <FormControl>
-                          <Input placeholder="(123) 456-7890" type="tel" {...field} />
+                          <Input 
+                            type="tel"
+                            placeholder="Enter your phone number" 
+                            className="h-11 focus:ring-2 focus:ring-blue-500" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-sm" />
                       </FormItem>
                     )}
                   />
@@ -108,18 +121,25 @@ export default function ContactForm() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel className="text-gray-700">Message</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Type in your message" className="min-h-[135px]" {...field} />
+                          <Textarea 
+                            placeholder="Type your message here..." 
+                            className="min-h-[135px] focus:ring-2 focus:ring-blue-500 resize-none" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-sm" />
                       </FormItem>
                     )}
                   />
 
                   <div className="flex justify-end mt-6">
-                    <Button type="submit" className="w-auto px-10 bg-blue-600 hover:bg-purple-700">
-                      Submit
+                    <Button 
+                      type="submit" 
+                      className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-purple-700 transition-colors duration-300"
+                    >
+                      Send Message
                     </Button>
                   </div>
                 </div>
@@ -131,4 +151,3 @@ export default function ContactForm() {
     </div>
   )
 }
-

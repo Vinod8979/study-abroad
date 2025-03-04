@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.js", "app/components/ContactForm.js", "app/components/ContactForm.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.js", "app/components/ContactForm.tsx", "app/components/ContactForm.jsx", "app/components/ServicesCarousel.js"],
   "exclude": ["node_modules"]
 }

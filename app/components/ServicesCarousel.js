@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const services = [
   {
@@ -14,17 +15,17 @@ const services = [
   },
   {
     title: "Choose Best University",
-    image: "choosing-university.png",
+    image: "/choosing-university.png",
     description: "Choosing the right university is a crucial step towards shaping your future. Consider factors such as academic programs, campus life, and career opportunities to find the best fit for your goals."
   },
   {
     title: "Student Guide",
-    image: "student-guide.png",
+    image: "/student-guide.png",
     description: "A student guide offers insights and practical tips to help students navigate their academic journey. It covers essential topics like time management, study techniques, and campus resources."
   },
   {
     title: "24/7 Call Services",
-    image: "call-service.png",
+    image: "/call-service.png",
     description: "Our 24-hour call service ensures that assistance is available whenever you need it. Whether it's an urgent query or routine support, we are here to help, day or night."
   }
 ];
@@ -56,7 +57,19 @@ const ServicesSection = () => {
               className="p-4 border rounded-lg bg-white transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               <h3 className="text-lg font-bold text-black">{service.title}</h3>
-              <img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-md my-3" />
+              <div className="relative w-full h-40 my-3">
+                <Image 
+                  src={service.image} 
+                  alt={service.title}
+                  width={400}
+                  height={300}
+                  className="rounded-md object-cover"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              </div>
               <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
@@ -70,11 +83,19 @@ const ServicesSection = () => {
               className="p-4 border rounded-lg bg-white shadow-sm"
             >
               <h3 className="text-lg font-bold text-black">{service.title}</h3>
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="w-full h-32 object-cover rounded-md my-2" 
-              />
+              <div className="relative w-full h-32 my-2">
+                <Image 
+                  src={service.image} 
+                  alt={service.title}
+                  width={400}
+                  height={240}
+                  className="rounded-md object-cover"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              </div>
               <p className="text-gray-600 text-sm">{service.description}</p>
             </div>
           ))}
