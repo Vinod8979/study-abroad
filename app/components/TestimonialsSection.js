@@ -2,33 +2,34 @@
 import { useState } from "react";
 import { FaPlay, FaPause, FaQuoteLeft, FaStar, FaStarHalf, FaRegStar } from "react-icons/fa";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import Image from 'next/image'; // Make sure to keep this import
 
 const testimonials = [
   {
     id: 1,
-    name: "Miss somya",
+    name: "Miss Somya",
     university: "Harvard University",
     mediaType: "image",
     mediaUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    testimonialText: "I got my education in abroad thank you so much.",
+    testimonialText: "I got my education abroad. Thank you so much.",
     rating: 4.5
   },
   {
     id: 2,
-    name: "MR Mahendra",
+    name: "Mr. Mahendra",
     university: "Harvard University",
     mediaType: "video",
     mediaUrl: "https://www.youtube.com/embed/tOwjEOt1zYU?si=GBvjle_nva02ycq9",
-    testimonialText: "Its a very good place i got selected in US with there support.",
+    testimonialText: "It's a very good place. I got selected in the US with their support.",
     rating: 5
   },
   {
-    id: 4,
-    name: "Mrs teresa marry",
+    id: 3,
+    name: "Mrs. Teresa Marry",
     university: "ETH Zurich (Switzerland)",
     mediaType: "image",
     mediaUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
-    testimonialText: "i refered more than 10 people nwo they are in abroad studies",
+    testimonialText: "I referred more than 10 people, now they are studying abroad.",
     rating: 4
   }
 ];
@@ -104,9 +105,11 @@ const TestimonialsSection = () => {
     }
 
     return (
-      <img
+      <Image
         src={media.mediaUrl}
         alt={media.name}
+        width={500}
+        height={500}
         className="w-full h-48 sm:h-64 object-cover rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
         onClick={() => handleMediaClick(media)}
         onError={(e) => {
@@ -168,9 +171,11 @@ const TestimonialsSection = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={() => setShowModal(false)}>
           <div className="max-w-4xl w-full">
-            <img
+            <Image
               src={selectedMedia.mediaUrl}
               alt={selectedMedia.name}
+              width={800}
+              height={800}
               className="w-full h-auto rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />

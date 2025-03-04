@@ -12,7 +12,7 @@ export default function TermsOfService() {
         {/* Header with navigation back to home */}
         <div className="mb-12">
           <Link href="/" className="text-blue-600 hover:text-blue-800 mb-8 inline-block">
-            ← Back to Home
+            &larr; Back to Home
           </Link>
           <h1 className="text-4xl font-bold mb-6">Terms of Service</h1>
           <p className="text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
@@ -23,7 +23,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
             <p className="mb-4">
-              Please read these Terms of Use carefully as they apply to your use of the CSB Study Abroad website ("Website"). By using the Website, you agree to be bound by these Terms of Use which form a legally binding agreement between you and CSB. If you do not want to be bound by these Terms of Use, do not continue to use this Website.
+              Please read these Terms of Use carefully as they apply to your use of the CSB Study Abroad website (&quot;Website&quot;). By using the Website, you agree to be bound by these Terms of Use which form a legally binding agreement between you and CSB. If you do not want to be bound by these Terms of Use, do not continue to use this Website.
             </p>
             <p className="mb-4">
               We may amend these Terms of Use at any time. Your continued use of the Website is considered to be acceptance of the amended Terms of Use.
@@ -33,10 +33,10 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">2. Disclaimer</h2>
             <p className="mb-4">
-              CSB Study Abroad tries to make the information published on this website as accurate as possible. However, the information on this website is provided on an "as is" basis without any express or implied warranty. There is no guarantee given as to the accuracy or currency of any individual item on this website.
+              CSB Study Abroad tries to make the information published on this website as accurate as possible. However, the information on this website is provided on an &quot;as is&quot; basis without any express or implied warranty. There is no guarantee given as to the accuracy or currency of any individual item on this website.
             </p>
             <p className="mb-4">
-              Persons accessing the website who require confirmation of information should refer to CSB's source for information or should contact a CSB representative. CSB does not accept responsibility for any loss or damage occasioned by use of the information published on the website nor from any access to the website.
+              Persons accessing the website who require confirmation of information should refer to CSB&apos;s source for information or should contact a CSB representative. CSB does not accept responsibility for any loss or damage occasioned by use of the information published on the website nor from any access to the website.
             </p>
           </section>
 

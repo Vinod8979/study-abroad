@@ -1,23 +1,23 @@
 import Head from 'next/head';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
-
     <div className="min-h-screen flex justify-center">
       <div className="container max-w-4xl mx-auto px-6 lg:px-12 py-20">
         <Head>
           <title>Privacy-Policy</title>
+          <meta name="description" content="Privacy policy of CSB Study Abroad. Learn about how we handle and protect your personal information." />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
         {/* Header with navigation back to home */}
         <div className="mb-12">
           <Link href="/" className="text-blue-600 hover:text-blue-800 mb-8 inline-block">
-            ← Back to Home
+            &larr; Back to Home
           </Link>
           <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
-          <p className="text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
+          <p className="text-gray-600">Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         </div>
 
         {/* Policy Content */}
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="mb-4">
-              Welcome to CSB Study Abroad ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This privacy policy describes how we collect, use, and protect your personal information when you use our website and services.
+              Welcome to CSB Study Abroad (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your personal information and your right to privacy. This privacy policy describes how we collect, use, and protect your personal information when you use our website and services.
             </p>
           </section>
 
@@ -55,9 +55,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">4. Information Sharing and Disclosure</h2>
-            <p className="mb-4">
-              We may share your information with:
-            </p>
+            <p className="mb-4">We may share your information with:</p>
             <ul className="list-disc ml-6 mb-4">
               <li className="mb-2">Educational institutions as part of the application process</li>
               <li className="mb-2">Immigration authorities for visa processing</li>
@@ -92,7 +90,6 @@ export default function PrivacyPolicy() {
             </p>
           </section>
         </div>
-        
       </div>
     </div>
   );
